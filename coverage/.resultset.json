@@ -1,0 +1,18 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/home/jav/Projects/feedback_form/app/controllers/application_controller.rb": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "/home/jav/Projects/feedback_form/app/helpers/application_helper.rb": [
+        0,
+        0
+      ]
+    },
+    "timestamp": 1464548927
+  }
+}

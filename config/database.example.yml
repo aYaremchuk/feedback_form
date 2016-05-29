@@ -1,0 +1,18 @@
+# It's an example of database.yml file. For development environment you should copy the file
+# into the database.yml
+postgresql_base: &postgresql_base
+  adapter: postgresql
+  host: localhost
+  username: user
+  password: password
+  encoding: utf8
+  reconnect: true
+  pool: 5
+
+development:
+  <<: *postgresql_base
+  database: ff_dev
+
+test:
+  <<: *postgresql_base
+  database: ff_test
