@@ -1,4 +1,26 @@
 Rails.application.routes.draw do
+  root 'feedbacks#new'
+
+  resources :feedbacks, only: [:new, :create, :show]
+  # get 'feedbacks/index'
+  # get 'feedbacks/new'
+  # get 'feedbacks/show'
+
+  namespace :admin do
+    get '/', to: 'feedbacks#index'
+    resources :feedbacks, only: [:destroy]
+    # get 'feedbacks/index'
+    # get 'feedbacks/show'
+    # get 'feedbacks/destroy'
+  end
+
+
+  # get 'feedbacks/index'
+  # get 'feedbacks/show'
+  # get 'feedbacks/destroy'
+
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

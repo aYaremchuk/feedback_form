@@ -12,6 +12,7 @@ gem 'hamlit-rails'
 
 gem 'simple_form'
 
+gem 'carrierwave'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -42,6 +43,7 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
   gem 'rspec-rails'
+  gem 'faker'
   gem 'factory_girl_rails'
   gem 'simplecov', require: false
   gem 'capybara'

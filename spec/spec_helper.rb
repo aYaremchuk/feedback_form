@@ -124,7 +124,6 @@ RSpec.configure do |config|
 
   config.after(:each) do
     DatabaseCleaner.clean
-    User.current_user = nil
   end
 
   config.order = 'random'
