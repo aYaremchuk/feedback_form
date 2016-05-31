@@ -25,6 +25,6 @@ class FeedbacksController < ApplicationController
 
   private
   def feedback_params
-    params.require(:feedback).permit(:name, :birthday, :date, :attachment)
+    params.require(:feedback).permit(:name, :birthday, :date_date, :date_time, :attachment)
   end
 end

@@ -1,15 +1,5 @@
 !!!
 %html
-  %head
-    %title FeedbackForm
-    = stylesheet_link_tag    'application', media: 'all'
-    = javascript_include_tag 'application'
-    = csrf_meta_tags
-  %body
-    - if notice
-      .alert.alert-success.alert-dismissable
-        %i.fa.fa-check
-        %button.close{ 'aria-hidden' => 'true', 'data-dismiss' => 'alert', type: 'button' } ×
-        %b= notice
+  = render 'layouts/head'
+  %body.hold-transition.background-page
     = yield
-    = debug(params) if Rails.env.development?
