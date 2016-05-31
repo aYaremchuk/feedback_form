@@ -1,6 +1,8 @@
 class Feedback < ActiveRecord::Base
+  extend TimeSplitter::Accessors
+  validate :age_check, :name_check, :date_check
   mount_uploader :attachment, AttachmentUploader
-  validate :name_check, :age_check, :date_check
+  split_accessor :date
 
   private
   def name_check
@@ -19,14 +21,12 @@ class Feedback < ActiveRecord::Base
   end
 
   def age_check
-    unless birthday <= 17.years.ago && birthday >= 65.years.ago
-      errors.add(:birthday, 'should be placed in diapazon 17..65 years')
-    end
+    return if birthday.present? && birthday <= 17.years.ago && birthday >= 65.years.ago
+    errors.add(:birthday, 'your age should be between 17..65 years')
   end
 
   def date_check
-    unless date > Time.zone.now
-      errors.add(:date, 'should be in future')
-    end
+    return if date.present? && date > Time.zone.now
+    errors.add(:date, 'should be in future')
   end
 end

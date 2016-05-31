@@ -1,16 +1,46 @@
-- if !@feedback.errors.empty?
-  .alert.alert-error
-    %ul
-      - @feedback.errors.full_messages.each do |msg|
-        %li= msg
-.well
-  = form_for @feedback, html: { multipart: true } do |f|
-    = f.label :name
-    = f.text_field :name
-    = f.label :birthday
-    = f.date_select :birthday, start_year: Date.today.year - 70, end_year: Date.today.year - 10
-    = f.label :date
-    = f.datetime_select :date, start_year: Date.today.year
-    = f.label :attachment
-    = f.file_field :attachment
-    = f.submit t :submit, class: "btn btn-primary"
+.register-box
+  .register-logo
+    %a{ href: '/' }
+      %b> Feedback
+      form
+  .feedback-box-body
+    %p.feedback-box-msg Введите данные
+    = simple_form_for(@feedback) do |f|
+      - if !@feedback.errors.empty?
+        .alert.alert-danger.alert-dismissible
+          %button.close{ 'aria-hidden' => 'true', 'data-dismiss' => 'alert', :type => 'button' } ×
+          = f.error_notification
+          %ul
+          - @feedback.errors.full_messages.each do |msg|
+            %li= msg
+      .form-group
+        = f.label t(:name)
+        = f.text_field :name, class: 'form-control'
+      .form-group
+        = f.label t(:birthday)
+        .input-group
+          .input-group-addon
+            %i.fa.fa-calendar
+          = f.text_field :birthday, id: 'datemask', class: 'form-control'
+      .form-group
+        = f.label t(:date)
+        .input-group
+          .input-group-addon
+            %i.fa.fa-calendar
+          = f.text_field :date_date, id: 'date', class: 'form-control'
+        .input-group
+          .input-group-addon
+            %i.fa.fa-clock-o
+          = f.text_field :date_time, id: 'time', class: 'form-control'
+      .form-group
+        = f.label :attachment
+        = f.file_field :attachment
+      .row
+        .col-xs-6.pull-right
+          = f.submit t(:submit), class: 'btn btn-primary btn-block btn-flat'
+
+:coffeescript
+  $ ->
+    $('#datemask').inputmask 'dd/mm/yyyy', 'placeholder': 'дд/мм/гггг'
+    $('#date').inputmask 'dd/mm/yyyy', 'placeholder': 'дд/мм/гггг'
+    $('#time').inputmask 'hh:mm', 'placeholder': 'чч:мм'

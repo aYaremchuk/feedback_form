@@ -11,8 +11,8 @@ gem 'hamlit'
 gem 'hamlit-rails'
 
 gem 'simple_form'
-
 gem 'carrierwave'
+gem 'time_splitter'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets

@@ -260,13 +260,9 @@ ru:
 
   submit: "Отправить"
 
-  helpers:
-    label:
-      feedback:
-        name: "Имя Фамилия"
-        birthday: "Дата рождения"
-        date: "Дата собеседования"
-        attachment: "Вложить файл"
+  name: "Имя Фамилия"
+  birthday: "Дата рождения"
+  date: "Дата собеседования"
 
   errors:
     messages:
