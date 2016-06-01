@@ -19,6 +19,12 @@ Capybara.configure do |config|
   config.default_max_wait_time = 15
 end
 
+Capybara::Webkit.configure do |config|
+  config.allow_url('https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css')
+  config.allow_url('maxcdn.bootstrapcdn.com')
+  config.allow_url('https://fonts.googleapis.com')
+end
+
 # Keep only the screenshots generated from the last failing test suite
 Capybara::Screenshot.prune_strategy = :keep_last_run
 

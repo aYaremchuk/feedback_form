@@ -16,9 +16,6 @@ let(:feedback) { FactoryGirl.create(:feedback) }
       expect { post :create, feedback: feedback_parameters}.to change(Feedback, :count).by(1)
     end
 
-    xit 'fail' do
-    #
-    end
   end
 
   describe 'GET #show' do
