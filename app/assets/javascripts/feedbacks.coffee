@@ -1,3 +1,5 @@
-# Place all the behaviors and hooks related to the matching controller here.
-# All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://coffeescript.org/
+$ ->
+  $('#datemask').inputmask 'dd/mm/yyyy', 'placeholder': 'дд/мм/гггг'
+  $('#date').inputmask 'dd/mm/yyyy', 'placeholder': 'дд/мм/гггг'
+  $('#time').inputmask 'hh:mm', 'placeholder': 'чч:мм'
+

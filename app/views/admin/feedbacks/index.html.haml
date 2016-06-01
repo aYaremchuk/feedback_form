@@ -1,9 +1,10 @@
-- if !flash[:notice].blank?
-  .alert.alert-info
+- unless flash[:notice].blank?
+  .alert.alert-info.alert-dismissible
+    %button.close{ 'aria-hidden' => 'true', 'data-dismiss' => 'alert', :type => 'button' } ×
     = flash[:notice]
 
-%br/
-%br/
+%h3
+  Feedbacks list
 %table.table.table-bordered.table-striped
   %thead
     %tr
@@ -15,6 +16,6 @@
     - @feedbacks.each do |feedback|
       %tr
         %td= feedback.name
-        %td= link_to "Download Resume", feedback.attachment_url
-        %td= feedback.date.strftime("%H:%M %m/%d/%Y")
-        %td= button_to "Delete", admin_feedback_path(feedback), method: :delete, class: "btn btn-danger", data: { confirm: "Are you sure that you wish to delete #{feedback.name}?" }
+        %td= link_to 'Download Resume', feedback.attachment_url
+        %td= feedback.date.strftime('%H:%M %m/%d/%Y')
+        %td= button_to 'Delete', admin_feedback_path(feedback), method: :delete, class: 'btn btn-danger', data: { confirm: "Are you sure that you wish to delete #{feedback.name}?" }

@@ -9,9 +9,11 @@ gem 'pg'
 # Use Haml instead of Erb
 gem 'hamlit'
 gem 'hamlit-rails'
-
+# Use simple_form for easy form creation
 gem 'simple_form'
+# Use carrierwave for file upload
 gem 'carrierwave'
+# Use time_splitter for split fields like datetime on different fields
 gem 'time_splitter'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
@@ -50,6 +52,8 @@ group :development, :test do
   gem 'capybara-webkit'
   gem 'capybara-screenshot'
   gem 'selenium-webdriver'
+  gem 'rubocop'
+  gem 'haml-lint'
 end
 
 group :test do

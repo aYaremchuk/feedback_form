@@ -5,8 +5,8 @@
       form
   .feedback-box-body
     %p.feedback-box-msg Введите данные
-    = simple_form_for(@feedback) do |f|
-      - if !@feedback.errors.empty?
+    = simple_form_for @feedback do |f|
+      - unless @feedback.errors.empty?
         .alert.alert-danger.alert-dismissible
           %button.close{ 'aria-hidden' => 'true', 'data-dismiss' => 'alert', :type => 'button' } ×
           = f.error_notification
@@ -39,8 +39,4 @@
         .col-xs-6.pull-right
           = f.submit t(:submit), class: 'btn btn-primary btn-block btn-flat'
 
-:coffeescript
-  $ ->
-    $('#datemask').inputmask 'dd/mm/yyyy', 'placeholder': 'дд/мм/гггг'
-    $('#date').inputmask 'dd/mm/yyyy', 'placeholder': 'дд/мм/гггг'
-    $('#time').inputmask 'hh:mm', 'placeholder': 'чч:мм'
+= javascript_include_tag 'feedbacks'

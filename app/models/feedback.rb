@@ -5,6 +5,7 @@ class Feedback < ActiveRecord::Base
   split_accessor :date
 
   private
+
   def name_check
     words = name.split(' ')
     capitalized_words = false

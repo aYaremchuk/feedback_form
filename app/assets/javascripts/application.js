@@ -13,6 +13,8 @@
 //= require jquery
 //= require jquery_ujs
 //
+
+//= require jquery.validate
 //= require plugins/input-mask/jquery.inputmask
 //= require plugins/input-mask/jquery.inputmask.date.extensions
 //= require plugins/input-mask/jquery.inputmask.extensions

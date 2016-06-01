@@ -4,7 +4,7 @@ class FeedbacksController < ApplicationController
   end
 
   def new
-   @feedback = Feedback.new
+    @feedback = Feedback.new
   end
 
   def create
@@ -24,6 +24,7 @@ class FeedbacksController < ApplicationController
   end
 
   private
+
   def feedback_params
     params.require(:feedback).permit(:name, :birthday, :date_date, :date_time, :attachment)
   end
