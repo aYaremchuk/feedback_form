@@ -1,0 +1,4 @@
+19-01-2017------------
+* Add TravisCI configuration - AY
+* downgrade ruby and rails version - AY
+* README.rdoc changed
