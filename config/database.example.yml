@@ -3,8 +3,6 @@
 postgresql_base: &postgresql_base
   adapter: postgresql
   host: localhost
-  username: user
-  password: password
   encoding: utf8
   reconnect: true
   pool: 5
