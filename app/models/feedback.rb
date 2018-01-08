@@ -12,16 +12,16 @@ class Feedback < ActiveRecord::Base
     words.each do |word|
       capitalized_words = word =~ /^[A-ZА-Я'][a-zа-я\-' ]+[a-zа-я']?$/u ? true : false
     end
-    errors.add(:name, 'should contain two capitalized words') if words.length != 2 || !capitalized_words
+    errors.add(:name, :capitalized_words_validation) if words.length != 2 || !capitalized_words
   end
 
   def age_check
     return if birthday.present? && birthday <= 17.years.ago && birthday >= 65.years.ago
-    errors.add(:birthday, 'your age should be between 17..65 years')
+    errors.add(:birthday, :age_validation)
   end
 
   def date_check
     return if date.present? && date > Time.zone.now
-    errors.add(:date, 'should be in future')
+    errors.add(:date, :date_validation)
   end
 end

@@ -1,23 +1,181 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
+---
 en:
-  hello: "Hello world"
+  activerecord:
+    errors:
+      messages:
+        record_invalid: "Возникли ошибки: %{errors}"
+        restrict_dependent_destroy:
+          has_many: "Невозможно удалить запись, так как существуют зависимости: %{record}"
+          has_one: "Невозможно удалить запись, так как существует зависимость: %{record}"
+      models:
+        feedback:
+          attributes:
+            birthday:
+              age_validation: "your age should be between 17..65 years"
+            date:
+              date_validation: "should be in future"
+            name:
+              capitalized_words_validation: "should contain two capitalized letters
+                букв"
+  birthday: "Дата рождения"
+  date: "Дата собеседования"
+  datetime:
+    distance_in_words:
+      about_x_hours:
+        few: "около %{count} часов"
+        many: "около %{count} часов"
+        one: "около %{count} часа"
+        other: "около %{count} часа"
+      about_x_months:
+        few: "около %{count} месяцев"
+        many: "около %{count} месяцев"
+        one: "около %{count} месяца"
+        other: "около %{count} месяца"
+      about_x_years:
+        few: "около %{count} лет"
+        many: "около %{count} лет"
+        one: "около %{count} года"
+        other: "около %{count} лет"
+      almost_x_years:
+        few: "почти %{count} года"
+        many: "почти %{count} лет"
+        one: "почти 1 год"
+        other: "почти %{count} лет"
+      half_a_minute: "меньше минуты"
+      less_than_x_minutes:
+        few: "меньше %{count} минут"
+        many: "меньше %{count} минут"
+        one: "меньше %{count} минуты"
+        other: "меньше %{count} минуты"
+      less_than_x_seconds:
+        few: "меньше %{count} секунд"
+        many: "меньше %{count} секунд"
+        one: "меньше %{count} секунды"
+        other: "меньше %{count} секунды"
+      over_x_years:
+        few: "больше %{count} лет"
+        many: "больше %{count} лет"
+        one: "больше %{count} года"
+        other: "больше %{count} лет"
+      x_days:
+        few: "%{count} дня"
+        many: "%{count} дней"
+        one: "%{count} день"
+        other: "%{count} дня"
+      x_minutes:
+        few: "%{count} минуты"
+        many: "%{count} минут"
+        one: "%{count} минуту"
+        other: "%{count} минуты"
+      x_months:
+        few: "%{count} месяца"
+        many: "%{count} месяцев"
+        one: "%{count} месяц"
+        other: "%{count} месяца"
+      x_seconds:
+        few: "%{count} секунды"
+        many: "%{count} секунд"
+        one: "%{count} секунду"
+        other: "%{count} секунды"
+    prompts:
+      day: "День"
+      hour: "Часов"
+      minute: "Минут"
+      month: "Месяц"
+      second: "Секунд"
+      year: "Год"
+  errors:
+    messages:
+      extension_white_list_error: "Нужно выбрать файл"
+  hello: Hello world
+  helpers:
+    select:
+      prompt: "Выберите: "
+    submit:
+      create: "Создать %{model}"
+      submit: "Сохранить %{model}"
+      update: "Сохранить %{model}"
+  name: "Имя Фамилия"
+  number:
+    currency:
+      format:
+        delimiter: Delimiter
+        format: "%n %u"
+        precision: '2'
+        separator: ","
+        significant: Significant
+        strip_insignificant_zeros: Strip insignificant zeros
+        unit: "руб."
+    format:
+      delimiter: Delimiter
+      precision: '3'
+      separator: ","
+      significant: Significant
+      strip_insignificant_zeros: Strip insignificant zeros
+    human:
+      decimal_units:
+        format: "%n %u"
+        units:
+          billion:
+            few: "миллиардов"
+            many: "миллиардов"
+            one: "миллиард"
+            other: "миллиардов"
+          million:
+            few: "миллионов"
+            many: "миллионов"
+            one: "миллион"
+            other: "миллионов"
+          quadrillion:
+            few: "квадриллионов"
+            many: "квадриллионов"
+            one: "квадриллион"
+            other: "квадриллионов"
+          thousand:
+            few: "тысяч"
+            many: "тысяч"
+            one: "тысяча"
+            other: "тысяч"
+          trillion:
+            few: "триллионов"
+            many: "триллионов"
+            one: "триллион"
+            other: "триллионов"
+          unit: Unit
+      format:
+        delimiter: Delimiter
+        precision: '1'
+        significant: Significant
+        strip_insignificant_zeros: Strip insignificant zeros
+      storage_units:
+        format: "%n %u"
+        units:
+          byte:
+            few: "байта"
+            many: "байт"
+            one: "байт"
+            other: "байта"
+          gb: "ГБ"
+          kb: "КБ"
+          mb: "МБ"
+          tb: "ТБ"
+    percentage:
+      format:
+        delimiter: Delimiter
+        format: "%n%"
+    precision:
+      format:
+        delimiter: Delimiter
+  submit: "Отправить"
+  support:
+    array:
+      last_word_connector: " и "
+      two_words_connector: " и "
+      words_connector: ", "
+  time:
+    am: "утра"
+    formats:
+      default: "%a, %d %b %Y, %H:%M:%S %z"
+      long: "%d %B %Y, %H:%M"
+      short: "%d %b, %H:%M"
+    pm: "вечера"
