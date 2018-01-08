@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe 'feedback creation' do
-  before { visit root_path  }
+  before { visit root_path }
   scenario 'check elements', js: true do
     expect(page).to have_css('div.feedback-box-body')
     expect(page).to have_css('input#feedback_name')

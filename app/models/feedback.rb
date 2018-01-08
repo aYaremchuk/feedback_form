@@ -10,15 +10,9 @@ class Feedback < ActiveRecord::Base
     words = name.split(' ')
     capitalized_words = false
     words.each do |word|
-      if word =~ /^[A-ZА-Я'][a-zа-я-' ]+[a-zа-я']?$/u
-        capitalized_words = true
-      else
-        capitalized_words = false
-      end
+      capitalized_words = word =~ /^[A-ZА-Я'][a-zа-я\-' ]+[a-zа-я']?$/u ? true : false
     end
-    if words.length != 2 || !capitalized_words
-      errors.add(:name, 'should contain two capitalized words')
-    end
+    errors.add(:name, 'should contain two capitalized words') if words.length != 2 || !capitalized_words
   end
 
   def age_check
