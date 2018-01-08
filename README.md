@@ -1,10 +1,10 @@
 FeedbackForm
 ============
 
-[![Build Status](https://travis-ci.org/aYaremchuk/form_with_travis.svg?branch=master)](https://travis-ci.org/aYaremchuk/form_with_travis.svg?branch=master)
-[![Code Climate](https://codeclimate.com/github/aYaremchuk/form_with_travis/badges/gpa.svg)](https://codeclimate.com/github/aYaremchuk/form_with_travis)
-[![Test Coverage](https://codeclimate.com/github/aYaremchuk/form_with_travis/badges/coverage.svg)](https://codeclimate.com/github/aYaremchuk/form_with_travis/coverage)
-[![Issue Count](https://codeclimate.com/github/aYaremchuk/form_with_travis/badges/issue_count.svg)](https://codeclimate.com/github/aYaremchuk/form_with_travis)
+[![Build Status](https://travis-ci.org/aYaremchuk/feedback_form.svg?branch=master)](https://travis-ci.org/aYaremchuk/feedback_form.svg?branch=master)
+[![Code Climate](https://codeclimate.com/github/aYaremchuk/feedback_form/badges/gpa.svg)](https://codeclimate.com/github/aYaremchuk/feedback_form)
+[![Test Coverage](https://codeclimate.com/github/aYaremchuk/feedback_form/badges/coverage.svg)](https://codeclimate.com/github/aYaremchuk/feedback_form/coverage)
+[![Issue Count](https://codeclimate.com/github/aYaremchuk/feedback_form/badges/issue_count.svg)](https://codeclimate.com/github/aYaremchuk/feedback_form)
 
 
 It's project with feedback form
