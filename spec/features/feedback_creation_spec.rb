@@ -30,8 +30,8 @@ describe 'feedback creation' do
   scenario 'fail', js: true do
     find('input.btn.btn-primary.btn-block.btn-flat').click
     expect(page).to have_css('div.alert.alert-danger.alert-dismissible')
-    expect(page).to have_content('Birthday your age should be between 17..65 years')
-    expect(page).to have_content('Name should contain two capitalized words')
-    expect(page).to have_content('Date should be in future')
+    expect(page).to have_content('Birthday возраст должен быть от 17 до 65 лет')
+    expect(page).to have_content('Name должно содержать два слова с заглавных букв')
+    expect(page).to have_content('Date дата должна быть в будущем')
   end
 end
